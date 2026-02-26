@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>My Todo App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Todo App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="app">
     <h1>Моя задача на сегодня:</h1>
-    <ul id="taskList"></ul>
-    <input type="text" id="newTaskInput" placeholder="Новая задача...">
-    <button onclick="addTask()">Добавить задачу</button>
-    <script src="script.js"></script>
+
+    <form id="taskForm" class="task-form" autocomplete="off">
+      <input type="text" id="newTaskInput" placeholder="Новая задача..." />
+      <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <p class="hint">
+      Подсказка: клик по тексту — редактирование. Кнопка ✕ — удалить.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
